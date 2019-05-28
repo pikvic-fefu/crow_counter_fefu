@@ -7,7 +7,7 @@ Crow Counter | Count
 {% block content %}
 <h1>Crow Counter</h1>
 <h2>Crows Counted So Far: {{ crows_count }}</h2>
-<form action="/count" method="POST">
+<form action="{{ url_for('count') }}" method="POST">
     <input type="submit" value="Add Crow!">
 </form>
 <a href="{{ url_for('index') }}">Back to Home</a>
