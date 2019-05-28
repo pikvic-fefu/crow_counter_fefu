@@ -10,6 +10,6 @@ Crow Counter | Count
 <form action="/count" method="POST">
     <input type="submit" value="Add Crow!">
 </form>
-<a href="/">Back to Home</a>
+<a href="{{ url_for('index') }}">Back to Home</a>
 
 {% endblock content %}
