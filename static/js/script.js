@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    document.querySelector('form').onsubmit = () => {
+    document.querySelector('#ajax').onclick = () => {
 
         // Создаём объект AJAX запроса
 
