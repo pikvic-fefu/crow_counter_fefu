@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -12,5 +12,11 @@ def index():
 def count():
     global crows_count
     if request.method == 'POST':
-        crows_count+=1
+        crows_count += 1
     return render_template('count.html', crows_count=crows_count)
+
+@app.route('/add_crow', methods=['POST'])
+def add_crow():
+    global crows_count
+    crows_count += 1
+    return jsonify({'crows_count': crows_count})
