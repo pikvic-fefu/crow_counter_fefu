@@ -5,13 +5,35 @@ Crow Counter | Count
 {% endblock title %}
 
 {% block content %}
-<h1>Crow Counter</h1>
-<h2>Crows Counted So Far: <span id="crows_count"> {{ crows_count }} </span></h2>
-<form action="{{ url_for('count') }}" method="POST">
-    <input id="submit" type="submit" value="Add Crow via Submit Form!">
-    <input id="ajax" type="button" value="Add Crow via AJAX!">
-    <input id="socket" type="button" value="Add Crow via Web Socket!">
-</form>
-<a href="{{ url_for('index') }}">Back to Home</a>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Crow Counter</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h2>Crows Counted So Far: <span id="crows_count">{{ crows_count }}</span></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form action="{{ url_for('count') }}" method="POST">
+                <button class="btn btn-primary" id="submit" type="submit" >Add Crow via Submit Form!</button>
+            </form>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" id="ajax">Add Crow via AJAX!</button>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary" id="socket">Add Crow via Web Socket!</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a href="{{ url_for('index') }}">Back to Home</a>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
